@@ -4181,8 +4181,8 @@ input, select, textarea {
 /* Content over the video */
 .banner-content {
   z-index: 1;
-  padding: 2em;
-  color: white;
+  padding: 0em;
+  color: black;
 }
 
 /* Responsive tweaks */
@@ -4212,5 +4212,8 @@ input, select, textarea {
 }
 
 
+video#bg-video {
+  display: block; /* Ensures it's not collapsed */
+}
 
 
