@@ -4209,4 +4209,24 @@ input, select, textarea {
 		position: relative;
 		z-index: 2;
 	  }
+	  @media screen and (max-width: 768px) {
+		.video-bg video {
+		  object-fit: cover;
+		  object-position: center;
+		  height: 100%;
+		  width: 100%;
+		}
+	  
+		#banner {
+		  padding: 5em 0;
+		}
+	  
+		#banner .inner h2 {
+		  font-size: 1.5em;
+		}
+	  
+		#banner .inner p {
+		  font-size: 1em;
+		}
+	  }
 	  
