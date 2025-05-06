@@ -4229,4 +4229,18 @@ input, select, textarea {
 		  font-size: 1em;
 		}
 	  }
+	  #banner {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5em 1em;
+		position: relative;
+		overflow: hidden;
+	  }
+	  #one {
+		margin-top: -1em; /* Adjust this value to your liking */
+		position: relative;
+		z-index: 3; /* Make sure it's above the video */
+	  }
 	  
