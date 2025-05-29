@@ -4239,9 +4239,29 @@ input, select, textarea {
 		overflow: hidden;
 	  }
 	  #one {
-		margin-top: -1em; /* Adjust this value to your liking */
+		margin-top: -1em; /* ADJUSTABLE */
 		position: relative;
-		z-index: 3; /* Make sure it's above the video */
+		z-index: 3; 
 	  }
 	  
-	  
+/* For filmportfolio.html video banner */
+.wrapper {
+  position: relative;
+  z-index: 3;       /* matches #one */
+  margin-top: -1em;  /* Same margin */
+  background: #2e3141; /* overlay color */
+}
+
+/* stupid triangle test */
+.wrapper .inner {
+  padding-top: 3em;  /* FIXES TRIANGLE YIPPEE */
+}
+
+/*Filmportfolio HTML video banner dimmer RAHHHHH */
+.film-portfolio-page #banner .video-bg video {
+  filter: brightness(0.4); 
+}
+.film-portfolio-page #banner .overlay {
+  display: block;
+  background: linear-gradient(to top, rgba(46, 49, 65, 0.7), transparent);
+}
