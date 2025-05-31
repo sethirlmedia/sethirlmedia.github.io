@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload film-portfolio-page"></body>
+	<body class="is-preload film-portfolio-page">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
@@ -69,51 +69,70 @@
 
 									<h3 class="major">Featured Work</h3>
 									<p>Below is a selection of film projects I've worked on, showcasing a range of styles, formats, and creative roles. </p>
-
+ 								
+<div class="portfolio-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="narrative">Narrative</button>
+  <!--<button class="filter-btn" data-filter="commercial">Commercial</button> -->
+  <button class="filter-btn" data-filter="competition">Competition</button>
+  <button class="filter-btn" data-filter="spec">Spec Ad</button>
+ <!--  <button class="filter-btn" data-filter="music">Music Video</button> -->
+</div>
 									<section class="features">
-										<article>
+
+										<article class="filter-item narrative">
+											<div class="portfolio-card">
 											<a href="https://www.youtube.com/watch?v=0BhROjaz8eo" class="image" target="_blank">
     											<img src="assets/film/filmportfolio1.jpg" alt="Film thumbnail" />
   										</a>
   										<h3 class="major">Sweeney Vs. Sherlock </h3>
- 										 <p>Film description</p>
+ 										 <p>Served as 1st AC on this stylized, character-driven short film. Responsible for focus pulling and camera department support.</p>
   										<a href="https://www.youtube.com/watch?v=0BhROjaz8eo" class="special" target="_blank">Watch on YouTube</a>
+										</div>
 									</article>
 									
-									<article>
+									<article class="filter-item narrative">
+										<div class="portfolio-card">
 										<a href="https://www.youtube.com/watch?v=Ng7FNsPFuKM" class="image" target="_blank">
 											<img src="assets/film/filmportfolio2.jpg" alt="Film thumbnail" />
 									  </a>
 									  <h3 class="major">Next - Short Film</h3>
-									  <p>Film description</p>
+									  <p>Dramatic short film independently produced. Served as Writer, Director, Producer, Cinematographer, and Editor.</p>
 									  <a href="https://www.youtube.com/watch?v=Ng7FNsPFuKM" class="special" target="_blank">Watch on YouTube</a>
+									  </div>
 								</article>
 								
-								<article>
+								<article class="filter-item spec">
+									<div class="portfolio-card">
 									<a href="https://www.youtube.com/watch?v=dHikCYEZHII" class="image" target="_blank">
 										<img src="assets/film/filmportfolio3.jpg" alt="Film thumbnail" />
 								  </a>
 								  <h3 class="major">Spotify Spec Ad</h3>
-								  <p>Film description</p>
+								  <p>Concept commercial for Spotify. Fully self-produced, from scripting to editing.</p>
 								  <a href="https://www.youtube.com/watch?v=dHikCYEZHII" class="special" target="_blank">Watch on YouTube</a>
+								  </div>
 							</article>
 							
-							<article>
+							<article class="filter-item competition">
+								<div class="portfolio-card">
 								<a href="https://www.youtube.com/watch?v=Ki9yErscRPM" class="image" target="_blank">
 									<img src="assets/film/filmportfolio4.jpg" alt="Film thumbnail" />
 							  </a>
 							  <h3 class="major">Gainesville 48 Hour Film Competition 2023</h3>
-							  <p>Film description</p>
+							  <p>Contributed as 1st AC under tight turnaround conditions during this regional 48-hour filmmaking challenge. Awarded 1st place for best student film.</p>
 							  <a href="https://www.youtube.com/watch?v=Ki9yErscRPM" class="special" target="_blank">Watch on YouTube</a>
+							  </div>
 						</article>
 
-						<article>
+						<article class="filter-item competition">
+							<div class="portfolio-card">
 							<a href="https://www.youtube.com/watch?v=PcRVsNPadK4" class="image" target="_blank">
 								<img src="assets/film/filmportfolio5.jpg" alt="Film thumbnail" />
 						  </a>
 						  <h3 class="major">Gainesville 48 Hour Film Competition 2024</h3>
-						  <p>Film description</p>
+						  <p>Led the project as Director and Editor while also handling on-set audio for this rapid-turnaround competition short.</p>
 						  <a href="https://www.youtube.com/watch?v=PcRVsNPadK4" class="special" target="_blank">Watch on YouTube</a>
+						</div>
 					</article>
 									</section>
 
@@ -127,7 +146,7 @@
 					<div class="inner">
 						<h2 class="major">Get in touch</h2>
 						<p>Wheather you're ready to start a project or just have a question, I'd love to hear from you.</p>
-						<form method="post" action="#">
+						<form id="contact-form">
 							<div class="fields">
 								<div class="field">
 									<label for="name">Name</label>
@@ -157,7 +176,56 @@
 						</ul>
 					</div>
 				</section>
+	<div id="overlay" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+"></div>
 
+<div id="thank-you-popup" style="
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: #2e3141;
+  color: white;
+  padding: 2em 2.5em;
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 90vw;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+">
+ <button id="close-popup" style="
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+">&times;</button>
+
+  <h3 style="margin-top: 0;">Thank you!</h3>
+  <p>Your message has been sent.</p>
+</div>
 
 			</div>
 
@@ -168,6 +236,107 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				if ('scrollRestoration' in history) {
+				  history.scrollRestoration = 'manual';
+				}
+			  
+				window.onbeforeunload = function () {
+				  window.scrollTo(0, 0);
+				};
+			  </script>
 
 	</body>
+		<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const popup = document.getElementById('thank-you-popup');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-popup');
+
+    let timeoutId;
+
+    function showPopup() {
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+
+      // Trigger transition
+      requestAnimationFrame(() => {
+        popup.style.opacity = '1';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+        overlay.style.opacity = '1';
+      });
+
+      timeoutId = setTimeout(hidePopup, 5000);
+    }
+
+    function hidePopup() {
+      popup.style.opacity = '0';
+      popup.style.transform = 'translate(-50%, -50%) scale(0.95)';
+      overlay.style.opacity = '0';
+
+      setTimeout(() => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      }, 400);
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/xblyrjyy", {
+          method: "POST",
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          showPopup();
+        } else {
+          alert("There was a problem submitting your form.");
+        }
+      } catch (error) {
+        alert("There was an error sending your message.");
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      clearTimeout(timeoutId);
+      hidePopup();
+    });
+
+    overlay.addEventListener('click', () => {
+      clearTimeout(timeoutId);
+      hidePopup();
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".filter-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        items.forEach((item) => {
+          if (filter === "all" || item.classList.contains(filter)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
+
 </html>

@@ -85,7 +85,7 @@
 					<div class="inner">
 						<h2 class="major">Get in touch</h2>
 						<p>Wheather you're ready to start a project or just have a question, I'd love to hear from you.</p>
-						<form method="post" action="#">
+						<form id="contact-form">
 							<div class="fields">
 								<div class="field">
 									<label for="name">Name</label>
@@ -115,7 +115,56 @@
 						</ul>
 					</div>
 				</section>
+	<div id="overlay" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+"></div>
 
+<div id="thank-you-popup" style="
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: #2e3141;
+  color: white;
+  padding: 2em 2.5em;
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 90vw;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+">
+ <button id="close-popup" style="
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+">&times;</button>
+
+  <h3 style="margin-top: 0;">Thank you!</h3>
+  <p>Your message has been sent.</p>
+</div>
 			</div>
 
 		<!-- Scripts -->
@@ -125,6 +174,83 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				if ('scrollRestoration' in history) {
+				  history.scrollRestoration = 'manual';
+				}
+			  
+				window.onbeforeunload = function () {
+				  window.scrollTo(0, 0);
+				};
+			  </script>
 
 	</body>
+		<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const popup = document.getElementById('thank-you-popup');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-popup');
+
+    let timeoutId;
+
+    function showPopup() {
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+
+      // Trigger transition
+      requestAnimationFrame(() => {
+        popup.style.opacity = '1';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+        overlay.style.opacity = '1';
+      });
+
+      timeoutId = setTimeout(hidePopup, 5000);
+    }
+
+    function hidePopup() {
+      popup.style.opacity = '0';
+      popup.style.transform = 'translate(-50%, -50%) scale(0.95)';
+      overlay.style.opacity = '0';
+
+      setTimeout(() => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      }, 400);
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/xblyrjyy", {
+          method: "POST",
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          showPopup();
+        } else {
+          alert("There was a problem submitting your form.");
+        }
+      } catch (error) {
+        alert("There was an error sending your message.");
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      clearTimeout(timeoutId);
+      hidePopup();
+    });
+
+    overlay.addEventListener('click', () => {
+      clearTimeout(timeoutId);
+      hidePopup();
+    });
+  });
+</script>
 </html>

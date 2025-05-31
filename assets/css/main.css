@@ -4265,3 +4265,141 @@ input, select, textarea {
   display: block;
   background: linear-gradient(to top, rgba(46, 49, 65, 0.7), transparent);
 }
+
+/*filmportfolio tabs */
+.features .image img {
+  transition: transform 0.3s ease;
+}
+.features .image:hover img {
+  transform: scale(1.03);
+}
+
+.portfolio-filters {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.filter-btn.active {
+  background: #ffffff;
+  color: #2e3141; /* Your site's dark text color */
+}
+
+/* Reset and theme-match the filter buttons */
+.portfolio-filters {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  margin: 0.4em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9em;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* FIX: Proper active button styling */
+.filter-btn.active {
+  background: #4c5c96;
+  color: #fff;
+  border-color: #4c5c96;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 1.5em;
+  margin: 0 0 2em 0;
+  overflow: hidden;
+}
+
+.features .filter-item {
+  flex: 0 1 calc(50% - 1.5em); /* basis ~48% minus margins */
+  margin-right: 1.5em;
+  margin-bottom: 2em;
+  box-sizing: border-box;
+}
+
+.features .filter-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+
+/* New inner wrapper flex container */
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1em;
+  background: #353849; /* adjust to your site theme */
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.portfolio-card .image {
+  margin-bottom: 1em;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.portfolio-card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /*used to be cover */
+  background:#353849
+}
+
+.portfolio-card h3.major {
+  margin: 0 0 0.5em;
+  color: #fff;
+}
+
+.portfolio-card p {
+  margin: 0 0 1em;
+  color: #ccc;
+}
+
+.portfolio-card .special {
+  margin-top: auto; /* pushes button to bottom */
+  align-self: flex-start; /* left align button */
+  background: #4c5c96;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.portfolio-card .special:hover {
+  background: #3b4a7a;
+}
+
