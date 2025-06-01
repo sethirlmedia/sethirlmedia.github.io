@@ -4311,17 +4311,18 @@ input, select, textarea {
 /* layout for film portfolio features */
 .film-portfolio-page .features {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* wider cards */
+  grid-template-columns: repeat(2, 1fr); /* Always 2 per row */
   gap: 2em;
   margin-bottom: 2em;
-  justify-content: center;
 }
 
 
 .film-portfolio-page .filter-item {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
+
 
 /* full-width on small screen */
 @media screen and (max-width: 736px) {
@@ -4334,13 +4335,15 @@ input, select, textarea {
 .film-portfolio-page .portfolio-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-grow: 1;
   height: 100%;
-  padding: 1em;
+  padding: 1.5em;
   background: #353849;
   border-radius: 6px;
   box-sizing: border-box;
 }
+
 
 .film-portfolio-page .portfolio-card .image {
   width: 100%;
@@ -4357,7 +4360,6 @@ input, select, textarea {
   display: block;
   border-radius: 6px 6px 0 0;
 }
-
 .film-portfolio-page .portfolio-card {
   padding: 1.5em;
   box-sizing: border-box;
@@ -4382,7 +4384,7 @@ input, select, textarea {
 }
 
 .film-portfolio-page .portfolio-card .special {
-  margin-top: auto;
+  margin-top: auto; /* pushes this to the bottom */
   align-self: flex-start;
   background: #4c5c96;
   color: #fff;
@@ -4392,6 +4394,7 @@ input, select, textarea {
   font-weight: 600;
   transition: background 0.3s ease;
 }
+
 
 .film-portfolio-page .portfolio-card .special:hover {
   background: #3b4a7a;
@@ -4405,6 +4408,17 @@ input, select, textarea {
   padding: 1em;            /* Optional: keep some padding */
   background-color: transparent; /* Or inherit if needed */
   border-radius: 0;        /* Optional: reset if you want */
+}
+
+@media screen and (max-width: 768px) {
+  .film-portfolio-page .features {
+    grid-template-columns: 1fr; /* Stack single column on mobile */
+  }
+
+  .film-portfolio-page .portfolio-card .image img {
+    object-fit: contain;
+    max-height: 240px;
+  }
 }
 
 
