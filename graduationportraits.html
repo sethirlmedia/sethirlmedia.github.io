@@ -6,74 +6,275 @@
 -->
 <html>
 	<head>
-		<title>Graduation Portraits</title>
+		<title>Graduation Portraits | SethIRL Media</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Package Cards */
+			.packages {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				justify-content: center;
+				margin: 3rem 0;
+			}
+			.package {
+				flex: 1;
+				min-width: 300px;
+				max-width: 350px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				padding: 2rem;
+				background: rgba(46, 49, 65, 0.4);
+				border-radius: 5px;
+				transition: transform 0.3s ease;
+			}
+			.package:hover {
+				transform: translateY(-5px);
+			}
+			.package h3 {
+				color: #ffffff;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+				padding-bottom: 0.5rem;
+			}
+			.package .price {
+				font-size: 1.75rem;
+				margin: 1rem 0;
+			}
+			.package ul {
+				margin: 1.5rem 0;
+			}
+			/* FAQ Toggle */
+			.faq-item {
+				margin-bottom: 1.5rem;
+			}
+			.faq-question {
+				font-weight: bold;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.faq-question:after {
+				content: "+";
+				font-size: 1.5rem;
+			}
+			.faq-question.active:after {
+				content: "-";
+			}
+			.faq-answer {
+				display: none;
+				padding: 1rem 0;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+		
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header">
+					<header id="header" class="alt">
 						<h1><a href="index.html">SethIRL Media</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
 
-							<!-- Menu -->
-							<nav id="menu">
-								<div class="inner">
-									<h2>Menu</h2>
-									<ul class="links">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="filmportfolio.html">Film Portfolio</a></li>
-										<li><a href="graduationportraits.html">Graduation Portraits</a></li>
-										<li><a href="photographyportfolio.html">Photography Portfolio</a></li>
-									</ul>
-									<a href="#" class="close">Close</a>
-								</div>
-							</nav>
-		
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="filmportfolio.html">Film Portfolio</a></li>
+							<li><a href="graduationportraits.html">Graduation Portraits</a></li>
+							<li><a href="photographyportfolio.html">Photography Portfolio</a></li>
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Graduation Portraits</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
-							</div>
-						</header>
+
+
+  <!-- Photo Background Container -->
+  
+  						<section id="banner" class="photography-banner">
+  <div class="photo-bg">
+    <img src="assets/graduation/graduation11.1.jpg" alt="Graduation background" />
+  </div>
+  <div class="overlay"></div>
+  <div class="inner">
+    <h2>Graduation Portraits</h2>
+    <p>You did it! After years of growth, connection, and unforgettable moments, I'm here to help you capture the memories that made UF your home, so you can cherish them forever.</p>
+  </div>
+</section>
+
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+									<!-- Packages Section -->
+									<section id="packages">
+										<h3 class="major">Portrait Packages</h3>
+										<div class="packages">
+											<!-- Basic Package -->
+											<div class="grad-package">
+												<div class="package-image">
+													<img src="assets/graduation/graduation1.jpg" alt="Basic package example" />
+												</div>
+												<div class="grad-package-content">
+													<h3>Basic</h3>
+													<div class="price">$125</div>
+													<ul>
+														<li>1 person</li>
+														<li>10-20 photos*</li>
+														<li>1-2 locations*</li>
+														<li>1 outfit change</li>
+														<li>30 minute session</li>
+														
+													</ul>
+													<p>Perfect for a quick photoshoot, ideal for grads who want simple, beautiful portraits in a short time. Locations will be your choice!</p>
+													<div class="grad-package-button-container">
+													<a href="#footer" class="button primary smooth-scroll">Book Now</a>
+												</div>
+											</div>
+										</div>
+											<!-- Standard Package -->
+											<div class="grad-package">
+												<div class="package-image">
+													<img src="assets/graduation/graduation10.jpg" alt="Standard package example" />
+												</div>
+												<div class="grad-package-content">
+													<h3>Standard</h3>
+													<div class="price">$250</div>
+													<ul>
+														<li>1 person</li>
+														<li>60-200 photos*</li>
+														<li>3-4 locations*</li>
+														<li>1 outfit change</li>
+														<li>1 hour session</li>
+													</ul>
+													<p>The best choice for grads who want personal attention, a mix of posed and candid shots, and multiple locations to showcase their personality.</p>
+													<div class="grad-package-button-container">
+													<a href="#footer" class="button primary smooth-scroll">Book Now</a>
+												</div>
+											</div>
+										</div>
+											<!-- Premium Package (Hidden) -->
+											<div class="grad-package" style="display: none;">
+												<div class="grad-package-image">
+													<img src="images/graduation/package-premium.jpg" alt="Premium package example" />
+												</div>
+												<div class="grad-package-content">
+													<h3>Premium/Group</h3>
+													<div class="price">Starting at $350</div>
+													<ul>
+														<li>1-3+ Grads</li>
+														<li>150-250 photos*</li>
+														<li>Unlimited locations*</li>
+														<li>Up to 2 outfit changes</li>
+														<li>1.5+ hour session</li>
+													</ul>
+													<p>Perfect for individuals wanting more outfits and locations, and for friends/clubs who want to celebrate milestones together.</p>
+													<div class="grad-package-button-container">
+													<a href="#footer" class="button primary smooth-scroll">Inquire</a>
+												</div>
+											</div>
+										</div>
+									</div>
+										<p style="text-align: center; font-style: italic;">*Photo count and location note: The number of photos delivered and locations visited will vary depending on the length of the session and time available.</p>
+									</section>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+									<!-- Gallery Section -->
+									<section id="gallery">
+										<h3 class="major">Check out sample grad photos below!</h3>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal1.jpg" alt="Graduation portrait 1" /></span>
+												</div>
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal2.jpg" alt="Graduation portrait 2" /></span>
+												</div>
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal3.jpg" alt="Graduation portrait 3" /></span>
+												</div>
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal4.jpg" alt="Graduation portrait 4" /></span>
+												</div>
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal5.jpg" alt="Graduation portrait 5" /></span>
+												</div>
+												<div class="col-4 col-12-small">
+													<span class="image fit"><img src="assets/graduation/graduationfinal6.jpg" alt="Graduation portrait 6" /></span>
+												</div>
+											</div>
+										</div>
+									</section>
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<!-- Booking Info -->
+									<section id="booking">
+										<h3 class="major">How do I book with you?</h3>
+										<p>If you're interested in setting up a session, visit my <a href="#footer">contact form</a> and send me an email! We'll set up a short 10-minute call to:</p>
+										<ul>
+											<li>Get to know each other</li>
+											<li>Schedule your session date</li>
+											<li>Plan locations and outfits</li>
+											<li>Discuss any special preferences</li>
+										</ul>
+										<p>A 25% deposit is required to secure your booking, with the remainder due on session day.</p>
+									</section>
 
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
+									<!-- FAQ Section -->
+									<section id="faq">
+										<h3 class="major">Frequently Asked Questions</h3>
+										<div class="faq-item">
+											<div class="faq-question">When should I book my session?</div>
+											<div class="faq-answer">
+												<p>ASAP! As grad season rolls around, it can be difficult to get all the settings you want. Due to lighting constraints, I only have two slots available per day (golden hour mornings and evenings).</p>
+											</div>
+										</div>
+										<div class="faq-item">
+											<div class="faq-question">Can I bring family/friends/pets?</div>
+											<div class="faq-answer">
+												<p>Of course! There's no extra fee to have your family or furry friends join in on your photos. For larger groups (3+ people), consider the Premium package for optimal timing.</p>
+											</div>
+										</div>
+										<div class="faq-item">
+											<div class="faq-question">How many photos do you deliver?</div>
+											<div class="faq-answer">
+												<p>I believe that getting you more is better! My albums typically consist of 80-140 edited selects per hour (with more edited photos delivered when you add on more graduates to a session). You'll receive a private online gallery to download all high-res images.</p>
+											</div>
+										</div>
+										<div class="faq-item">
+											<div class="faq-question">What if I'm feeling nervous?</div>
+											<div class="faq-answer">
+												<p>No worries! I'm all about making your session fun and relaxed. I'll provide a variety of prompts and poses and guide you throughout your whole session. Most clients feel comfortable within the first 10 minutes!</p>
+											</div>
+										</div>
+										<div class="faq-item">
+											<div class="faq-question">What should I bring?</div>
+											<div class="faq-answer">
+												<p>Bring any graduation regalia you have (cap, gown, stole, cords). Props are always fun but not necessary—some popular options include:</p>
+												<ul>
+													<li>Balloons</li>
+													<li>Confetti</li>
+													<li>Champagne (for popping shots!)</li>
+													<li>Personal items (instruments, sports gear, etc.)</li>
+												</ul>
+											</div>
+										</div>
+										<div class="faq-item">
+											<div class="faq-question">What if I need something custom?</div>
+											<div class="faq-answer">
+												<p>I'm happy to work with any constraints you may have to create a plan that works best for you! If pricing is an issue, we can discuss payment plans or shorter sessions. Everyone deserves grad photos they can cherish.</p>
+											</div>
+										</div>
 									</section>
 
 								</div>
@@ -81,11 +282,11 @@
 
 					</section>
 
-				<!-- Footer -->
+				<!-- Footer  -->
 				<section id="footer">
 					<div class="inner">
 						<h2 class="major">Get in touch</h2>
-						<p>Wheather you're ready to start a project or just have a question, I'd love to hear from you.</p>
+						<p>Whether you're ready to start a project or just have a question, I'd love to hear from you.</p>
 						<form id="contact-form">
 							<div class="fields">
 								<div class="field">
@@ -106,66 +307,17 @@
 							</ul>
 						</form>
 						<ul class="contact">
-					<li class="icon solid fa-envelope"><a href="mailto:contact@sethirlmedia.com">contact@sethirlmedia.com</a></li>
-								<li class="icon brands fa-twitter"><a href="https://tiktok.com/sethirlmedia">tiktok.com/sethirlmedia</a></li>
-								<li class="icon brands fa-facebook-f"><a href="https://facebook.com/sethirlmedia">facebook.com/sethirlmedia</a></li>
-								<li class="icon brands fa-instagram"><a href="https://instagram.com/sethirlmedia">instagram.com/sethirlmedia</a></li>
+							<li class="icon solid fa-envelope"><a href="mailto:contact@sethirlmedia.com">contact@sethirlmedia.com</a></li>
+							<li class="icon brands fa-twitter"><a href="https://tiktok.com/sethirlmedia">tiktok.com/sethirlmedia</a></li>
+							<li class="icon brands fa-facebook-f"><a href="https://facebook.com/sethirlmedia">facebook.com/sethirlmedia</a></li>
+							<li class="icon brands fa-instagram"><a href="https://instagram.com/sethirlmedia">instagram.com/sethirlmedia</a></li>
 						</ul>
 						<ul class="copyright">
 							<li>&copy; 2025 SethIRL Media. All rights reserved.</li>
 						</ul>
 					</div>
 				</section>
-	<div id="overlay" style="
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.5);
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-"></div>
 
-<div id="thank-you-popup" style="
-  display: none;
-  position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
-  background: #2e3141;
-  color: white;
-  padding: 2em 2.5em;
-  border-radius: 10px;
-  z-index: 1000;
-  max-width: 90vw;
-  box-shadow: 0 0 15px rgba(0,0,0,0.7);
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  text-align: center;
-">
- <button id="close-popup" style="
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  color: white;
-  cursor: pointer;
-  padding: 0;
-  line-height: 1;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-">&times;</button>
-
-  <h3 style="margin-top: 0;">Thank you!</h3>
-  <p>Your message has been sent.</p>
-</div>
 			</div>
 
 		<!-- Scripts -->
@@ -175,83 +327,85 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- FAQ Toggle Script -->
 			<script>
-				if ('scrollRestoration' in history) {
-				  history.scrollRestoration = 'manual';
-				}
-			  
-				window.onbeforeunload = function () {
-				  window.scrollTo(0, 0);
-				};
-			  </script>
+				$(document).ready(function() {
+					// FAQ toggle
+					$('.faq-question').click(function() {
+						$(this).toggleClass('active').next('.faq-answer').slideToggle(200);
+					});
+
+					// contact form script
+					document.addEventListener('DOMContentLoaded', function () {
+						const form = document.getElementById('contact-form');
+						const popup = document.getElementById('thank-you-popup');
+						const overlay = document.getElementById('overlay');
+						const closeBtn = document.getElementById('close-popup');
+
+						let timeoutId;
+
+						function showPopup() {
+							popup.style.display = 'block';
+							overlay.style.display = 'block';
+							requestAnimationFrame(() => {
+								popup.style.opacity = '1';
+								popup.style.transform = 'translate(-50%, -50%) scale(1)';
+								overlay.style.opacity = '1';
+							});
+							timeoutId = setTimeout(hidePopup, 5000);
+						}
+
+						function hidePopup() {
+							popup.style.opacity = '0';
+							popup.style.transform = 'translate(-50%, -50%) scale(0.95)';
+							overlay.style.opacity = '0';
+							setTimeout(() => {
+								popup.style.display = 'none';
+								overlay.style.display = 'none';
+							}, 400);
+						}
+
+						form.addEventListener('submit', async function (e) {
+							e.preventDefault();
+							const formData = new FormData(form);
+							try {
+								const response = await fetch("https://formspree.io/f/xblyrjyy", {
+									method: "POST",
+									headers: { 'Accept': 'application/json' },
+									body: formData
+								});
+								if (response.ok) {
+									form.reset();
+									showPopup();
+								} else {
+									alert("There was a problem submitting your form.");
+								}
+							} catch (error) {
+								alert("There was an error sending your message.");
+							}
+						});
+
+						closeBtn.addEventListener('click', () => {
+							clearTimeout(timeoutId);
+							hidePopup();
+						});
+
+						overlay.addEventListener('click', () => {
+							clearTimeout(timeoutId);
+							hidePopup();
+						});
+					});
+				});
+				// Smooth scroll for package buttons
+					$('.smooth-scroll').click(function(e) {
+						e.preventDefault();
+						var target = $(this).attr('href');
+						$('html, body').animate({
+							scrollTop: $(target).offset().top - 50
+						}, 800);
+					});
+			</script>
 
 	</body>
-		<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-    const popup = document.getElementById('thank-you-popup');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('close-popup');
-
-    let timeoutId;
-
-    function showPopup() {
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
-
-      // Trigger transition
-      requestAnimationFrame(() => {
-        popup.style.opacity = '1';
-        popup.style.transform = 'translate(-50%, -50%) scale(1)';
-        overlay.style.opacity = '1';
-      });
-
-      timeoutId = setTimeout(hidePopup, 5000);
-    }
-
-    function hidePopup() {
-      popup.style.opacity = '0';
-      popup.style.transform = 'translate(-50%, -50%) scale(0.95)';
-      overlay.style.opacity = '0';
-
-      setTimeout(() => {
-        popup.style.display = 'none';
-        overlay.style.display = 'none';
-      }, 400);
-    }
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-
-      try {
-        const response = await fetch("https://formspree.io/f/xblyrjyy", {
-          method: "POST",
-          headers: { 'Accept': 'application/json' },
-          body: formData
-        });
-
-        if (response.ok) {
-          form.reset();
-          showPopup();
-        } else {
-          alert("There was a problem submitting your form.");
-        }
-      } catch (error) {
-        alert("There was an error sending your message.");
-      }
-    });
-
-    closeBtn.addEventListener('click', () => {
-      clearTimeout(timeoutId);
-      hidePopup();
-    });
-
-    overlay.addEventListener('click', () => {
-      clearTimeout(timeoutId);
-      hidePopup();
-    });
-  });
-</script>
 </html>

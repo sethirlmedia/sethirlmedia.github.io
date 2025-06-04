@@ -3458,7 +3458,7 @@ input, select, textarea {
 			font-weight: 200;
 			letter-spacing: 0.1em;
 			line-height: 2;
-			text-transform: uppercase;
+			padding-bottom: 0.4em;
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -4239,7 +4239,7 @@ input, select, textarea {
 		overflow: hidden;
 	  }
 	  #one {
-		margin-top: -1em; /* ADJUSTABLE */
+		margin-top: -2em; /* ADJUSTABLE */
 		position: relative;
 		z-index: 3; 
 	  }
@@ -4254,7 +4254,7 @@ input, select, textarea {
 
 /* stupid triangle test */
 .wrapper .inner {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 /* Filmportfolio HTML video banner dimmer */
@@ -4419,6 +4419,129 @@ input, select, textarea {
     object-fit: contain;
     max-height: 240px;
   }
+}
+
+/* GRADUATION PAGE SPECIFIC STYLES */
+/* GRADUATION PACKAGES - FINAL FIX */
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch; /* Crucial for equal heights */
+}
+
+.grad-package {
+  flex: 1 0 300px; /* flex-grow, flex-shrink, flex-basis */
+  max-width: 322px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(35, 37, 48, 0.4);
+  border-radius: 5px;
+}
+
+.grad-package-content {
+  padding: 1.5rem;
+  flex: 1; /* Fills all space */
+  display: flex;
+  flex-direction: column;
+}
+
+.grad-package-button-container {
+  margin-top: auto; /* Pushes to bottom */
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.package-image {
+	width: 320.33px; 
+  height: 448.45px;
+  overflow: hidden;
+}
+
+.package-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.extra-line-gap {
+  margin-bottom: 0 !important; /* Adjust this value as needed */
+  line-height: 1.5; /* Optional: Increase line spacing within paragraph */
+}
+
+
+.photography-banner {
+  position: relative;
+  height: 60vh;
+  background-image: url('assets/graduation/graduation11.1.jpg');
+  background-size: cover;          /* Fill area, crop if needed */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.photography-banner .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);    /* semi-transparent dark layer */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.photography-banner .inner {
+  position: relative;
+  z-index: 2;                    /* above overlay */
+  padding: 0 2em;
+  max-width: 800px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#banner.photography-banner {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  max-width: 100vw;  /* force full width */
+}
+
+#banner.photography-banner .photo-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#banner.photography-banner .photo-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#banner.photography-banner .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+#banner.photography-banner .inner {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.6em;
+  max-width: 800px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
 }
 
 
