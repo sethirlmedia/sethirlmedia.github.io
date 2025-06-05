@@ -4470,7 +4470,7 @@ input, select, textarea {
   line-height: 1.5; /* Optional: Increase line spacing within paragraph */
 }
 
-
+/* photography banner */
 .photography-banner {
   position: relative;
   height: 60vh;
@@ -4539,8 +4539,8 @@ input, select, textarea {
   position: relative;
   z-index: 2;
   padding: 0 1.6em;
-  max-width: 800px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  max-width: 1000px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
   margin: 0 auto;
 }
 
